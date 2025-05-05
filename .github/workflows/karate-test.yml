@@ -28,12 +28,13 @@ jobs:
     - name: Run Karate Tests
       run: mvn test "-Dkarate.env=${{ github.event.inputs.environment }}" "-Dkarate.options=--tags ${{ github.event.inputs.tags }}"
 
-    - name: Prepare Reports
-      run: mkdir -p reports && cp -r target/karate-reports/* reports/ && cp -r target/cucumber-html-reports/* reports/
+    - name: Copy report to publish folder
+      run: |
+        mkdir -p karate-gh-pages
+        cp -r target/karate-reports/* karate-gh-pages/
 
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+    - name: Publish report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: test-reports
-        path: reports
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: karate-gh-pages
