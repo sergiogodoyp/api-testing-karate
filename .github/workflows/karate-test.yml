@@ -39,3 +39,10 @@ jobs:
       with:
         name: cucumber-report
         path: target/cucumber-html-reports/*.html
+
+    - name: Deploy Report
+      uses: peaceiris/actions-gh-pages@v3
+      if: success()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: target/karate-reports
