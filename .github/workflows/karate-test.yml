@@ -32,7 +32,7 @@ jobs:
       run: mkdir -p reports && cp -r target/karate-reports/* reports/ && cp -r target/cucumber-html-reports/* reports/
 
     - name: Upload Pages Artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v4
       with:
         path: reports
   deploy:
