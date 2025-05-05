@@ -29,13 +29,13 @@ jobs:
       run: mvn test "-Dkarate.env=${{ github.event.inputs.environment }}" "-Dkarate.options=--tags ${{ github.event.inputs.tags }}"
 
     - name: Upload Karate Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: karate-report
         path: target/karate-reports/karate-summary.html
 
     - name: Upload Cucumber Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: cucumber-report
         path: target/cucumber-reports/*.html
