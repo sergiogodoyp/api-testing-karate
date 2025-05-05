@@ -26,4 +26,4 @@ jobs:
         distribution: 'temurin'
         
     - name: Run Karate Tests
-      run: mvn test -Dkarate.env=${{ github.event.inputs.environment }} -Dtags="${{ github.event.inputs.tags }}"
+      run: mvn test "-Dkarate.env=${{ github.event.inputs.environment }}" "-Dkarate.options=--tags ${{ github.event.inputs.tags }}"
