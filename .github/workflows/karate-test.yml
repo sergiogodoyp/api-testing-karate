@@ -1,0 +1,29 @@
+name: Karate Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Entorno (dev, staging, prod)'
+        required: true
+        default: 'dev'
+      tags:
+        description: 'Tags (ej: @smoke,@regression)'
+        required: true
+        default: '@smoke'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Java 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Run Karate Tests
+      run: mvn test -Dkarate.env=${{ github.event.inputs.environment }} -Dtags="${{ github.event.inputs.tags }}"
