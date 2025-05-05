@@ -31,10 +31,18 @@ jobs:
     - name: Prepare Reports
       run: mkdir -p reports && cp -r target/karate-reports/* reports/ && cp -r target/cucumber-html-reports/* reports/
 
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: reports/
+
     - name: Upload Pages Artifact
       uses: actions/upload-pages-artifact@v1
       with:
         path: reports
+
   deploy:
     needs: tests
     runs-on: ubuntu-latest
