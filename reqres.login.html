@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>reqres.logout</title>
+    <title>reqres.login</title>
   </head>
   <body>
     <div id="root-container">
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-05-06 02:40:32 AM</div>
+    <div>2025-05-06 02:40:31 AM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:3]"><span>[1:3]</span> <span>Cerrar sesión de un usuario</span></a>
+            <a href="#[1.1:22]"><span>[1.1:22]</span> <span>Iniciar sesion exitosamente</span></a>
           </div>
         </div>
       </div>
@@ -64,24 +64,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">reqres/logout.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Cerrar sesión de un usuario</span>
+          <span class="feature-path">reqres/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Iniciar Sesion</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:3]">
+          <div class="scenario-heading" id="[1.1:22]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">logout</a><a class="badge badge-primary" href="karate-tags.html">regresion</a><a class="badge badge-primary" href="karate-tags.html">smoke</a>
+                <a class="badge badge-primary" href="karate-tags.html">regresion</a><a class="badge badge-primary" href="karate-tags.html">login</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:3]</span>
-                <span class="scenario-name">Cerrar sesión de un usuario</span>
+                Scenario: <span>[1.1:22]</span>
+                <span class="scenario-name">Iniciar sesion exitosamente</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>723</span>
+              <span>ms:</span>&nbsp;<span>740</span>
             </div>
           </div>
           
@@ -91,8 +91,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref passed">4</div>
+    <div class="step-container" id="1.5">
+      <div class="step-ref passed">5</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url urlBase</span>
@@ -107,7 +107,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">02:40:30.907 karate.env system property was: dev 
+  <div class="preformatted" data-parent="1.5">02:40:30.908 karate.env system property was: dev 
 </div>   
 
   
@@ -120,14 +120,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref passed">5</div>
+    <div class="step-container" id="1.6">
+      <div class="step-ref passed">6</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &quot;logout&quot;</span>
+        <span>And</span>&nbsp;<span>path &quot;login&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -148,8 +148,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref passed">6</div>
+    <div class="step-container" id="1.7">
+      <div class="step-ref passed">7</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>header x-api-key = apiKey</span>
@@ -176,14 +176,45 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref passed">7</div>
+    <div class="step-container" id="1.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.8">{
+    &quot;email&quot;: &quot;#(email)&quot;,
+    &quot;password&quot;: &quot;#(password)&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">717</div>
+    <div class="time-cell passed">706</div>
   </div>
 
    
@@ -192,23 +223,25 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7">02:40:31.132 request:
-1 &gt; POST https://reqres.in/api/logout
+  <div class="preformatted" data-parent="1.15">02:40:31.135 request:
+1 &gt; POST https://reqres.in/api/login
 1 &gt; x-api-key: reqres-free-v1
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 54
 1 &gt; Host: reqres.in
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.15)
 1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;george.bluth@reqres.in&quot;,&quot;password&quot;:&quot;pistol&quot;}
 
-
-02:40:31.664 response time in milliseconds: 527
+02:40:31.666 response time in milliseconds: 530
 1 &lt; 200
 1 &lt; Date: Tue, 06 May 2025 02:40:31 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
-1 &lt; Cf-Ray: 93b51d0408b4eb2d-SJC
+1 &lt; Cf-Ray: 93b51d040d95faba-SJC
 1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1746499231&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=jj4u5ecOi3yn2AkMAlcMqeQYxXGvfqaAPIZmIPLPHG8%3D&quot;}]}
 1 &lt; Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1746499231&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=jj4u5ecOi3yn2AkMAlcMqeQYxXGvfqaAPIZmIPLPHG8%3D
 1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
@@ -216,13 +249,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Ratelimit-Policy: 100;w=60
 1 &lt; Ratelimit-Limit: 100
-1 &lt; Ratelimit-Remaining: 98
+1 &lt; Ratelimit-Remaining: 94
 1 &lt; Ratelimit-Reset: 60
-1 &lt; Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
+1 &lt; Etag: W/&quot;1d-KiRorYvYB7Hb/YjzSEkB1Gx+ITk&quot;
 1 &lt; Via: 1.1 vegur
 1 &lt; Cf-Cache-Status: DYNAMIC
-1 &lt; server-timing: cfL4;desc=&quot;?proto=TCP&amp;rtt=1334&amp;min_rtt=1296&amp;rtt_var=513&amp;sent=7&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=3110&amp;recv_bytes=773&amp;delivery_rate=3305555&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=b108edc548fc83f6&amp;ts=395&amp;x=0&quot;
-{}
+1 &lt; server-timing: cfL4;desc=&quot;?proto=TCP&amp;rtt=1310&amp;min_rtt=1273&amp;rtt_var=553&amp;sent=7&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=3110&amp;recv_bytes=893&amp;delivery_rate=2718274&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=e15a457e8cf3d202&amp;ts=410&amp;x=0&quot;
+{&quot;token&quot;:&quot;QpwL5tke4Pnpja7X1&quot;}
 
 </div>   
 
@@ -236,8 +269,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
+    <div class="step-container" id="1.16">
+      <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -264,14 +297,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
+    <div class="step-container" id="1.17">
+      <div class="step-ref passed">17</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print response</span>
+        <span>And</span>&nbsp;<span>match response.token != &quot;&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">13</div>
   </div>
 
    
@@ -280,10 +313,35 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9">02:40:31.671 [print] {
-}
- 
-</div>   
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
